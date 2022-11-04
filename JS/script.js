@@ -85,7 +85,6 @@ function equalsTo(n1, n2, operation) {
 function doOperation(n1, n2, operation) {
     if (flagLimit) {
         memory.innerHTML = "0";
-        typing.innerHTML = "";
         flagLimit = 0;
         flagReset = 1;
     }
@@ -97,6 +96,7 @@ function doOperation(n1, n2, operation) {
         if (memory.innerHTML == "0") {
             memory.innerHTML = typing.innerHTML + operation;
         } else {
+
             if (!(opeChoice == null)) {
                 typing.innerHTML = equalsTo(n1, n2, opeChoice);
                 memory.innerHTML = typing.innerHTML + operation;
@@ -135,7 +135,7 @@ nums.forEach((num) => {
             postDotSize = 0;
         }
 
-        if (sizeCheck(typing.innerHTML) < 10 && postDotSize < 3) {
+        if (sizeCheck(typing.innerHTML) + postDotSize < 10 && postDotSize < 3) {
             console.log(num.innerText)
             typing.innerHTML = dotify(
                 String(typing.innerHTML + num.innerText)
@@ -181,7 +181,6 @@ opeReverse.addEventListener("click", () => {
 opeDot.addEventListener("click", () => {
     if (flagLimit) {
         memory.innerHTML = "0";
-        typing.innerHTML = "";
         flagLimit = 0;
     }
 
