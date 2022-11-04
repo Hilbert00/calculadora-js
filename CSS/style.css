@@ -16,6 +16,10 @@ footer {
     color: #fff;
 }
 
+footer {
+    margin-bottom: 0;
+}
+
 #corpo {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
